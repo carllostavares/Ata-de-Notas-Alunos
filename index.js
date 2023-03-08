@@ -2,8 +2,7 @@ const notasDeALunos = require('./alunos');
 
 const leia = require('prompt-sync')();
 
-// npm i prompt-sync :digitaar isso no termonal para baixar o pacote necessário para fazer o prompt
-
+// npm i prompt-sync :digitar isso no termonal para baixar o pacote necessário para fazer o prompt
 
 
 console.log("Digite uma opcao: \n [1] - Cadastrar Aluno \n [2] - Consulta aluno ");
@@ -26,7 +25,7 @@ switch(opcao){
   console.log("Aluno(a) Cadasatrado com Sucesso !!")
   break;
 
- case ('2'):
+ case '2':
 
   function exibeNomeENota(aluno) {
     for(i = 0; i < notasDeALunos.length; i++){
