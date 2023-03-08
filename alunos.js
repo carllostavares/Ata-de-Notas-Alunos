@@ -1,5 +1,4 @@
 const notasDeALunos = [
-  
 {
     nome: "Joao",
     nota: 8

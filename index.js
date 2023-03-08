@@ -1,25 +1,51 @@
-const alunos = require('./alunos')
+const notasDeALunos = require('./alunos');
 
-/* const alunos = ["João", "Juliana", "Ana", "Caio"];
-const medias = [10, 8, 7.5, 9]; */
+const leia = require('prompt-sync')();
 
-/* const listaDeAlunosEMedias = [alunos, medias]; */
+// npm i prompt-sync :digitaar isso no termonal para baixar o pacote necessário para fazer o prompt
 
-/* function exibeNomeENota(aluno) {
-  if (alunos[0].includes(aluno)) {
-    const [alunos, medias] = listaDeAlunosEMedias;
 
-    const indice = alunos.indexOf(aluno);
 
-    const mediaDoAluno = medias[indice];
+console.log("Digite uma opcao: \n [1] - Cadastrar Aluno \n [2] - Consulta aluno ");
+let opcao = leia();
 
-    console.log(`${aluno} tem a média ${mediaDoAluno}.`);
-  } else {
-    console.log("Aluno não encontrado!");
+switch(opcao){
+
+ case '1': 
+  console.log("Digite seu nome: ");
+  var nomeAluno = leia();
+
+  console.log("Digite a sua nota: ");
+  var notaAluno = parseFloat(leia());
+
+  function cadastraAluno(aluno,ponto){
+  notasDeALunos.push({nome:aluno,nota:ponto})
   }
+
+  cadastraAluno(nomeAluno,notaAluno);
+  console.log("Aluno(a) Cadasatrado com Sucesso !!")
+  break;
+
+ case ('2'):
+
+  function exibeNomeENota(aluno) {
+    for(i = 0; i < notasDeALunos.length; i++){
+
+      if (notasDeALunos[i].nome == aluno ){
+        const notaDoAluno = notasDeALunos[i].nota;
+        console.log(`O aluno ${aluno} tem a nota ${notaDoAluno}.`);
+      } if(i==notasDeALunos.length) {
+        console.log("Aluno não encontrado!");
+      }
+    }
+  }
+  console.log("Digite o nome do aluno: ");
+  var nomeAluno = leia();
+
+  exibeNomeENota(nomeAluno);
+  break;
+
+  default:
+    console.log(`Desculpe, mas não encontramos uma opçãaao correspondente a ${opcao}`);
+
 }
-exibeNomeENota("Ana"); */
-
-alunos.push({nome:'Carlos', nota:6});
-
-console.log(alunos)
