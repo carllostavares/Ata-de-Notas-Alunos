@@ -1,20 +1,20 @@
-const notasDeALunos = [
+const ataDeNotasDeALunos = [
 {
-    nome: "Joao",
+    nome:'Joao',
     nota: 8
   },
   {
-    nome : "Ana",
+    nome :'Ana',
     nota: 9
   },
   {
-    nome : "Pedro",
+    nome :'Pedro',
     nota: 7
   },
   {
-  nome : "Marcelo",
+  nome :'Marcelo',
   nota: 5
   }
 ]
 
-module.exports = notasDeALunos
+module.exports = ataDeNotasDeALunos
