@@ -33,7 +33,7 @@ do {
   console.log("\nDigite o nome do(a) aluno(a):\n\n");
   var consultaAluno = leia('Nome:');
   var consultaNomeMenusculo = consultaAluno.toLowerCase()
-  var consultaNomeComPrimeiraLetraMaiuscula = consultaNomeMenusculo[0].toUpperCase() + nomeMenusculo.substring(1)
+  var consultaNomeComPrimeiraLetraMaiuscula = consultaNomeMenusculo[0].toUpperCase() + consultaNomeMenusculo.substring(1)
 
   for(contador = 0; contador < ataDeNotasDeALunos.length; contador++){
   
@@ -43,7 +43,7 @@ do {
      contador = ataDeNotasDeALunos.length;
      } else {
       if(contador + 1  == ataDeNotasDeALunos.length) {
-        console.log(`\n\nAluno(a) ${consultaNomeComPrimeiraLetraMaiuscula} não está cadastrado(a) !`)
+        console.log(`\n\nAluno(a) ${consultaAluno} não está cadastrado(a) !`)
        }
      }
   }
