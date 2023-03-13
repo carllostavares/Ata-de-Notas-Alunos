@@ -13,6 +13,9 @@ do {
   case 1: 
     console.log("\nDigite o nome do aluno(a):\n\n");
     var nomeAluno = leia('Nome:');
+    var nomeMenusculo = nomeAluno.toLowerCase()
+    var nomeComPrimeiraLetraMaiuscula = nomeMenusculo[0].toUpperCase() + nomeMenusculo.substring(1)
+
 
     console.log("\nDigite a sua nota:\n\n");
     var notaAluno = leia('Nota:');
@@ -21,24 +24,26 @@ do {
     ataDeNotasDeALunos.push({nome:aluno,nota:ponto})
     }
 
-    cadastraAluno(nomeAluno,notaAluno);
-    console.log("\n\nAluno(a) Cadasatrado com Sucesso !!")
+    cadastraAluno(nomeComPrimeiraLetraMaiuscula,notaAluno);
+    console.log(`\n\nAluno(a) ${nomeComPrimeiraLetraMaiuscula} cadasatrado com Sucesso !!`)
   break;
 
   case 2:
 
   console.log("\nDigite o nome do(a) aluno(a):\n\n");
-  var aluno = leia('Nome:');
+  var consultaAluno = leia('Nome:');
+  var consultaNomeMenusculo = consultaAluno.toLowerCase()
+  var consultaNomeComPrimeiraLetraMaiuscula = consultaNomeMenusculo[0].toUpperCase() + nomeMenusculo.substring(1)
 
   for(contador = 0; contador < ataDeNotasDeALunos.length; contador++){
   
-    if(ataDeNotasDeALunos[contador].nome == aluno ){
+    if(ataDeNotasDeALunos[contador].nome == consultaNomeComPrimeiraLetraMaiuscula ){
      const notaDoAluno = ataDeNotasDeALunos[contador].nota;
-     console.log(`\nAluno(a) ${aluno} tem a nota ${notaDoAluno}.`);
+     console.log(`\nAluno(a) ${consultaNomeComPrimeiraLetraMaiuscula} tem a nota ${notaDoAluno}.`);
      contador = ataDeNotasDeALunos.length;
      } else {
       if(contador + 1  == ataDeNotasDeALunos.length) {
-        console.log(`\n\nAluno(a) ${aluno} não está cadastrado(a) !`)
+        console.log(`\n\nAluno(a) ${consultaNomeComPrimeiraLetraMaiuscula} não está cadastrado(a) !`)
        }
      }
   }
@@ -62,3 +67,5 @@ do {
       break;
     }
 }while(opcao !== 0);
+
+
