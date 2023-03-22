@@ -2,7 +2,7 @@ const ataDeNotasDeALunos = require('./alunos');
 
 const leia = require('prompt-sync')();
 
-// npm contador prompt-sync :digitar isso no terminal para baixar o pacote necessário para fazer o prompt
+// npm install prompt-sync :digitar isso no terminal para baixar o pacote necessário para fazer o prompt
 
 do {
   console.log("\n\n=======================================================================================\n\n   Digite uma opcao: \n\n [1] - Cadastrar Aluno(a) e sua nota \n\n [2] - Consultar uma nota do aluno(a) \n\n [3] - Relatorio de notas dos alunos(as)\n\n [0] - SAIR DO PROGRAMA\n\n=======================================================================================\n\n");
